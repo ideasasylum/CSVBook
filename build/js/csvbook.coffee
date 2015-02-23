@@ -3,12 +3,14 @@ jQuery ->
 
   $('#csvfile').on 'change', () ->
     console.log 'csv file changed'
-    Papa.parse $('#csvfile')[0].files[0], {
-      header: true
-      skipEmptyLines: true
-      complete: (results) ->
-        console.log results
-        setup results
+    $('#csvfile').parse {
+      config: {
+        header: true
+        skipEmptyLines: true
+        complete: (results) ->
+          console.log results
+          setup results
+      }
     }
 
   $('#previous').on 'click', () ->
