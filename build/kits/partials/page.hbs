@@ -1,0 +1,10 @@
+<script id="page-template" type="text/x-handlebars-template">
+  <div class="page">
+    {{#each this}}
+      <div class="row">
+        <div class="col-md-3"><span class="key">{{@key}}:</span></div>
+        <div class="col-md-9">{{simple_format this}}</div>
+      </div>
+    {{/each}}
+  </div>
+</script>
